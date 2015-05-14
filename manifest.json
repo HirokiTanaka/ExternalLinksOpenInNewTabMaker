@@ -1,0 +1,11 @@
+{
+  "name": "Favicon2SleipnirSearch",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "対象のリンクすべてを別のタブで開くように上書きする拡張。",
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["js/lib/jquery.min.js","js/main.js"],
+    "run_at": "document_idle"
+  }]
+}

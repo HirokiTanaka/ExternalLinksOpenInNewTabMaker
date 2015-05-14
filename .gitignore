@@ -1,0 +1,6 @@
+# MacOS Finder cache
+.DS_Store
+
+# sublime project files
+*.sublime-project
+*.sublime-workspace
