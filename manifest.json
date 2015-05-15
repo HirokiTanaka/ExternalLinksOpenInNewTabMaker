@@ -1,11 +1,24 @@
 {
-  "name": "Favicon2SleipnirSearch",
-  "version": "0.0.1",
+  "name": "ExternalLinksOpenInNewTabMaker",
+  "version": "1.0.0",
   "manifest_version": 2,
-  "description": "対象のリンクすべてを別のタブで開くように上書きする拡張。",
+  "description": "ページ内の外部リンクすべてを別のタブで開くようにする拡張。(This is an extension to make all external links open in a new tab)",
+  "icons": {
+    "16": "icons/icon_16.png"
+  },
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*"],
     "js": ["js/lib/jquery.min.js","js/main.js"],
-    "run_at": "document_idle"
-  }]
+    "run_at": "document_start"
+  }],
+  "browser_action": {
+    "default_icon": "icons/icon_16.png",
+    "default_popup": "popup/html/index.html"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "permissions": [
+    "storage"
+  ]
 }
